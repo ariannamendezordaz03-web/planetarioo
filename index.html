@@ -43,7 +43,7 @@
   </style>
 </head>
 <body>
-  <textarea id="input" placeholder="Escribe: pabaras y letras cortas"></textarea>
+  <textarea id="input" placeholder=" neptuno,saturno, sol"></textarea>
 
   <script>
     const hydra = new Hydra({ detectAudio: false });
@@ -58,23 +58,7 @@
       venus: ()=>(100,-0.0018,0.17).diff(osc(20,0.00008)).modulateScale(noise(1.5,0.18)).color(11, 0.9, 0.011, 5, 22,  0.5, -1).contrast(1.4).add(src(o0).modulate(o0,.04),.6, .9).mask(shape(60).scale(1.2,1,2)),
       mercurio: ()=>(100,-0.0018,0.17).diff(osc(20,0.00008).rotate(Math.PI/0.0002)).modulateScale(noise(1.5,0.18).modulateScale(osc(13).rotate(()=>Math.sin(time/2))),4).color(1,0.5,0.4, 0.9, 0.2, 0.011, 5, 22,  0.5, -1).contrast(1.4).mask(shape(300)).scale(1,1,2).add(src(o0).modulate(o0,.04),.6, .9),
       sol: ()=>(2).colorama(.2).repeat(2,8,4).kaleid(() => mouse.x *.110).color(2,1,.03).modulateScrollX(osc(1,1,4)).mask(shape(200,0.5,.5)).modulate(voronoi(25,6,2)),
-      
-  
-
-
-
-
-
-      
-
-
-
-
-      
-
-     
-
-magt : () => {
+      magt : () => {
   osc(40,0.5,() => a.fft[0]*200).out(o2)
   let shape = osc(60, 0.1, 2)
     .mult(noise(1, 4))
